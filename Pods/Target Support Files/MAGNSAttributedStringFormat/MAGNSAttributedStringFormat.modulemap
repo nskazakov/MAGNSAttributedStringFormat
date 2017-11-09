@@ -1,0 +1,6 @@
+framework module MAGNSAttributedStringFormat {
+  umbrella header "MAGNSAttributedStringFormat-umbrella.h"
+
+  export *
+  module * { export * }
+}

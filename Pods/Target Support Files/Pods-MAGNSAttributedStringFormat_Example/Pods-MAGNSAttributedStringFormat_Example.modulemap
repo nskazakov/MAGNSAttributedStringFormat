@@ -1,0 +1,6 @@
+framework module Pods_MAGNSAttributedStringFormat_Example {
+  umbrella header "Pods-MAGNSAttributedStringFormat_Example-umbrella.h"
+
+  export *
+  module * { export * }
+}
