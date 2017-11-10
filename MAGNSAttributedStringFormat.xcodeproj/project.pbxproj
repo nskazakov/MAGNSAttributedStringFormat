@@ -9,11 +9,12 @@
 /* Begin PBXBuildFile section */
 		607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD51AFB9204008FA782 /* AppDelegate.swift */; };
 		607FACD81AFB9204008FA782 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD71AFB9204008FA782 /* ViewController.swift */; };
-		607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 607FACD91AFB9204008FA782 /* Main.storyboard */; };
 		607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDC1AFB9204008FA782 /* Images.xcassets */; };
-		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
 		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
 		70573C6D227AAE17C64F8A57 /* Pods_MAGNSAttributedStringFormat_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D95B6C6B02EB475CEFD7863 /* Pods_MAGNSAttributedStringFormat_Tests.framework */; };
+		8F1AC93B1FB467F600DD80DC /* MAGNSAttributedString+Format.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F1AC93A1FB467F600DD80DC /* MAGNSAttributedString+Format.swift */; };
+		8FA6D6691FB553850055C611 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8FA6D6651FB553840055C611 /* LaunchScreen.xib */; };
+		8FA6D66A1FB553850055C611 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8FA6D6671FB553840055C611 /* Main.storyboard */; };
 		8FB502651FB45C0A0004A721 /* NOTICE in Resources */ = {isa = PBXBuildFile; fileRef = 8FB502641FB45C0A0004A721 /* NOTICE */; };
 		F90C76622225DD6E7734081B /* Pods_MAGNSAttributedStringFormat_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 414D9F3A595ACE7CF491B1B0 /* Pods_MAGNSAttributedStringFormat_Example.framework */; };
 /* End PBXBuildFile section */
@@ -34,9 +35,7 @@
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = ../Example/MAGNSAttributedStringFormat/Info.plist; sourceTree = "<group>"; };
 		607FACD51AFB9204008FA782 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = ../Example/MAGNSAttributedStringFormat/AppDelegate.swift; sourceTree = "<group>"; };
 		607FACD71AFB9204008FA782 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ViewController.swift; path = ../Example/MAGNSAttributedStringFormat/ViewController.swift; sourceTree = "<group>"; };
-		607FACDA1AFB9204008FA782 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		607FACDC1AFB9204008FA782 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = ../Example/MAGNSAttributedStringFormat/Images.xcassets; sourceTree = "<group>"; };
-		607FACDF1AFB9204008FA782 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		607FACE51AFB9204008FA782 /* MAGNSAttributedStringFormat_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MAGNSAttributedStringFormat_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
@@ -44,6 +43,9 @@
 		7F437043A54224CEDDEC8936 /* MAGNSAttributedStringFormat.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = MAGNSAttributedStringFormat.podspec; sourceTree = "<group>"; };
 		8960965AE6BB40595A8FB46E /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		8B8F5A9985334C613B8344F6 /* Pods-MAGNSAttributedStringFormat_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MAGNSAttributedStringFormat_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MAGNSAttributedStringFormat_Example/Pods-MAGNSAttributedStringFormat_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		8F1AC93A1FB467F600DD80DC /* MAGNSAttributedString+Format.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MAGNSAttributedString+Format.swift"; sourceTree = "<group>"; };
+		8FA6D6661FB553840055C611 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Example/MAGNSAttributedStringFormat/Base.lproj/LaunchScreen.xib; sourceTree = SOURCE_ROOT; };
+		8FA6D6681FB553840055C611 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Example/MAGNSAttributedStringFormat/Base.lproj/Main.storyboard; sourceTree = SOURCE_ROOT; };
 		8FB502641FB45C0A0004A721 /* NOTICE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = NOTICE; sourceTree = "<group>"; };
 		968B910B7076C3DF9F654A32 /* Pods-MAGNSAttributedStringFormat_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MAGNSAttributedStringFormat_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-MAGNSAttributedStringFormat_Example/Pods-MAGNSAttributedStringFormat_Example.release.xcconfig"; sourceTree = "<group>"; };
 		B719D6DAC170FB43A3F0BBDD /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
@@ -74,6 +76,7 @@
 		607FACC71AFB9204008FA782 = {
 			isa = PBXGroup;
 			children = (
+				8F1AC9391FB4670F00DD80DC /* Extensions */,
 				607FACF51AFB993E008FA782 /* Podspec Metadata */,
 				607FACD21AFB9204008FA782 /* Example for MAGNSAttributedStringFormat */,
 				607FACE81AFB9204008FA782 /* Tests */,
@@ -97,9 +100,9 @@
 			children = (
 				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
 				607FACD71AFB9204008FA782 /* ViewController.swift */,
-				607FACD91AFB9204008FA782 /* Main.storyboard */,
+				8FA6D6671FB553840055C611 /* Main.storyboard */,
 				607FACDC1AFB9204008FA782 /* Images.xcassets */,
-				607FACDE1AFB9204008FA782 /* LaunchScreen.xib */,
+				8FA6D6651FB553840055C611 /* LaunchScreen.xib */,
 				607FACD31AFB9204008FA782 /* Supporting Files */,
 			);
 			name = "Example for MAGNSAttributedStringFormat";
@@ -149,6 +152,14 @@
 				6D95B6C6B02EB475CEFD7863 /* Pods_MAGNSAttributedStringFormat_Tests.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8F1AC9391FB4670F00DD80DC /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				8F1AC93A1FB467F600DD80DC /* MAGNSAttributedString+Format.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		F324309E12E2272CE6CBD133 /* Pods */ = {
@@ -252,9 +263,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				8FB502651FB45C0A0004A721 /* NOTICE in Resources */,
-				607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */,
-				607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */,
+				8FA6D6691FB553850055C611 /* LaunchScreen.xib in Resources */,
 				607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */,
+				8FA6D66A1FB553850055C611 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -374,6 +385,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8F1AC93B1FB467F600DD80DC /* MAGNSAttributedString+Format.swift in Sources */,
 				607FACD81AFB9204008FA782 /* ViewController.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
 			);
@@ -398,20 +410,20 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		607FACD91AFB9204008FA782 /* Main.storyboard */ = {
+		8FA6D6651FB553840055C611 /* LaunchScreen.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
-				607FACDA1AFB9204008FA782 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		607FACDE1AFB9204008FA782 /* LaunchScreen.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				607FACDF1AFB9204008FA782 /* Base */,
+				8FA6D6661FB553840055C611 /* Base */,
 			);
 			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+		8FA6D6671FB553840055C611 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8FA6D6681FB553840055C611 /* Base */,
+			);
+			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -521,7 +533,7 @@
 			baseConfigurationReference = 8B8F5A9985334C613B8344F6 /* Pods-MAGNSAttributedStringFormat_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = MAGNSAttributedStringFormat/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Example/MAGNSAttributedStringFormat/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.$(PRODUCT_NAME:rfc1034identifier)";
@@ -536,7 +548,7 @@
 			baseConfigurationReference = 968B910B7076C3DF9F654A32 /* Pods-MAGNSAttributedStringFormat_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = MAGNSAttributedStringFormat/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Example/MAGNSAttributedStringFormat/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.$(PRODUCT_NAME:rfc1034identifier)";
