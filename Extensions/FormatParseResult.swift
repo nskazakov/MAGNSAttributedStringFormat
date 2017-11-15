@@ -8,7 +8,9 @@ enum FormatStringState: Int {
 }
 
 protocol FormatParseResult {
-    func formatStringParser(format: NSString, maxPosition: Int) -> [NSMutableArray]
+    var range: NSRange {get set}
+    var index: Int {get set}
+    
 }
 
 class FormatParseResultImplementation: FormatParseResult {
@@ -19,18 +21,25 @@ class FormatParseResultImplementation: FormatParseResult {
         self.range = range
         self.index = index
     }
+}
+
+class FormatStringParses {
+    var range = NSRange()
+    var index = 0
     
-    func formatStringParser(format: NSString, maxPosition: Int) -> [NSMutableArray] {
-        var arguments: [NSMutableArray] = []
+    public func formatStringParser(format: NSString, maxPosition: Int) -> [FormatParseResult] {
+        var arguments = [FormatParseResult]()
         var position = 0
         var start: Int = NSNotFound
         var positionString: NSMutableString? = nil
         var state: FormatStringState = .FormatStringStateUnknown
         
-        for _ in 0..<format.length {
+        var index = 0
+        
+        for _ in 0..<(format.length - 1) {
             index += 1
-            var unichar = format.character(at: index)
-            let unicharString = "\(unichar)"
+            var un = format.character(at: index)
+            let unicharString = UnicodeScalar(un)
             
             if (unicharString == "%") {
                 start = index
@@ -47,14 +56,16 @@ class FormatParseResultImplementation: FormatParseResult {
                             positionString = nil
                         }
                     }
-                    let result = [FormatParseResultImplementation.init(range: NSMakeRange(start, (index + 1) - start), index: currentPosition)]
-                    arguments.append(result as! NSMutableArray)
+                    let result = FormatParseResultImplementation(range: NSMakeRange(start, (index + 1) - start), index: currentPosition)
+                    self.range = NSMakeRange(start, (index + 1) - start)
+                    self.index = currentPosition
+                    arguments.append(result)
                     state = .FormatStringStateUnknown
-                } else if (state == .FormatStringStartFormat || state == .FormatStringStatePositional) && (unichar >= 0 && unichar <= 9) {
+                } else if (state == .FormatStringStartFormat || state == .FormatStringStatePositional) && (un >= 0 && un <= 9) {
                     if positionString == nil {
-                        positionString = NSMutableString.init(characters: &unichar, length: 1)
+                        positionString = NSMutableString(characters: &un, length: 1)
                     } else {
-                        positionString?.append(NSMutableString.init(characters: &unichar, length: 1) as String)
+                        positionString?.append(NSMutableString(characters: &un, length: 1) as String)
                     }
                     state = .FormatStringStatePositional
                 } else if (state == .FormatStringStatePositional && unicharString == "$") {
