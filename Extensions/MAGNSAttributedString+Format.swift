@@ -2,8 +2,9 @@ import Foundation
 
 extension NSAttributedString {
     
-    public func attributedStringWith(format: NSString, arguments: NSMutableAttributedString...) -> NSAttributedString {
-        let result = self.initWith(format: format, arguments: arguments)
+
+    class public func attributedStringWith(format: NSString, arguments: NSMutableAttributedString...) -> NSAttributedString {
+        let result = NSAttributedString().initWith(format: format, arguments: arguments)
         return result
     }
     
@@ -27,21 +28,17 @@ extension NSAttributedString {
         
         attributedString.beginEditing()
         
-        let maxPosition = arguments.count
+        let maxPosition = format.count - 1
         let parseResult = FormatStringParses()
         let parseResults = parseResult.formatStringParser(format: format as NSString, maxPosition: maxPosition)
             .sorted(by: { (lhs, rhs) -> Bool in
-                return lhs.range.location < rhs.range.location
+                return rhs.range.location < lhs.range.location
             })
         
-        var index = 0
+//        var index = 0
         var attributeStringArray = [NSMutableAttributedString]()
-        
-        for _ in index..<maxPosition {
-            index += 1
-            for argument in arguments {
-                attributeStringArray.append(argument)
-            }
+        for argument in arguments {
+            attributeStringArray.append(argument)
         }
         
         for result in parseResults {
@@ -61,13 +58,13 @@ extension NSAttributedString {
                     
                 }
                 
-                attributedString.replaceCharacters(in: parseResult.range, with: arg)
+                attributedString.replaceCharacters(in: result.range, with: arg)
             } else {
-                attributedString.replaceCharacters(in: parseResult.range, with: arg.description)
+                attributedString.replaceCharacters(in: result.range, with: arg.description)
             }
         }
         attributedString.endEditing()
-
-        return NSMutableAttributedString(attributedString: attributedString)
+        let result = NSMutableAttributedString(attributedString: attributedString)
+        return result
     }
 }

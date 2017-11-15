@@ -13,6 +13,7 @@ class ViewController: UIViewController {
 
 
     @IBOutlet weak var descriptionLabel: UILabel!
+    @IBOutlet weak var textView: UITextView!
     
     
     override func viewDidLoad() {
@@ -23,23 +24,36 @@ class ViewController: UIViewController {
     
     func testAttributedFormatString() {
         let blue = NSMutableAttributedString(string: "blue", attributes: [
-            NSAttributedStringKey.font: UIFont.boldSystemFont(ofSize: 13),
-            NSAttributedStringKey.foregroundColor: UIColor.blue
+                NSAttributedStringKey.font: UIFont.boldSystemFont(ofSize: 23),
+                NSAttributedStringKey.foregroundColor: UIColor.blue
             ])
         
         let green = NSMutableAttributedString(string: "green", attributes: [
-            NSAttributedStringKey.font: UIFont.boldSystemFont(ofSize: 13),
-            NSAttributedStringKey.foregroundColor: UIColor.green
+                NSAttributedStringKey.font: UIFont.boldSystemFont(ofSize: 23),
+                NSAttributedStringKey.foregroundColor: UIColor.green
             ])
         
-        let red = NSMutableAttributedString(string: "red", attributes: [
-            NSAttributedStringKey.font: UIFont.boldSystemFont(ofSize: 13),
-            NSAttributedStringKey.foregroundColor: UIColor.red
+        let red = NSMutableAttributedString(string: "11111", attributes: [
+                NSAttributedStringKey.font: UIFont.boldSystemFont(ofSize: 23),
+                NSAttributedStringKey.foregroundColor: UIColor.red
             ])
         
-        let attr = NSAttributedString().attributedStringWith(format: "My favorite colors is %@ and %@, but not %@", arguments: red, blue, green)
+        let attr = NSAttributedString.attributedStringWith(format: "", arguments: red, blue, green)
+        
+        
+        let underlineStringTest = NSMutableAttributedString(string: "Nikita", attributes: [
+//                NSAttributedStringKey.underlineStyle : NSUnderlineStyle.styleDouble,
+            
+                NSAttributedStringKey.font: UIFont.boldSystemFont(ofSize: 23),
+                NSAttributedStringKey.foregroundColor: UIColor.gray
+            ])
 
+        let attribute = NSAttributedString.attributedStringWith(format: "My name is %@. My name need underline", arguments: underlineStringTest)
+//        self.testLabel.attributedText = attribxute
         self.descriptionLabel.attributedText = attr
+        self.textView.attributedText = attribute
+
+        
     }
 
 }
