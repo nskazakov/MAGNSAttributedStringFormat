@@ -31,13 +31,12 @@ class FormatStringParses {
         var arguments = [FormatParseResult]()
         var position = 0
         var start: Int = NSNotFound
-        var positionString: NSMutableString? = nil
+        var positionString: NSString? = nil
         var state: FormatStringState = .FormatStringStateUnknown
         
         var index = 0
         
-        for _ in 0..<(format.length - 1) {
-            index += 1
+        for _ in 0..<format.length {
             var un = format.character(at: index)
             let unicharString = UnicodeScalar(un)
             
@@ -59,13 +58,16 @@ class FormatStringParses {
                     let result = FormatParseResultImplementation(range: NSMakeRange(start, (index + 1) - start), index: currentPosition)
                     self.range = NSMakeRange(start, (index + 1) - start)
                     self.index = currentPosition
-                    arguments.append(result)
+                    
+                    if maxPosition > arguments.count {
+                        arguments.append(result)
+                    }
                     state = .FormatStringStateUnknown
                 } else if (state == .FormatStringStartFormat || state == .FormatStringStatePositional) && (un >= 0 && un <= 9) {
                     if positionString == nil {
-                        positionString = NSMutableString(characters: &un, length: 1)
+                        positionString = NSString(characters: &un, length: 1)
                     } else {
-                        positionString?.append(NSMutableString(characters: &un, length: 1) as String)
+                        positionString?.appending(NSString(characters: &un, length: 1) as String)
                     }
                     state = .FormatStringStatePositional
                 } else if (state == .FormatStringStatePositional && unicharString == "$") {
@@ -74,6 +76,7 @@ class FormatStringParses {
                     state = .FormatStringStateUnknown
                 }
             }
+            index += 1
         }
         return arguments
     }

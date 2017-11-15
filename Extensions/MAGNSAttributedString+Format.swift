@@ -3,22 +3,17 @@ import Foundation
 extension NSAttributedString {
     
 
-    class public func attributedStringWith(format: NSString, arguments: NSMutableAttributedString...) -> NSAttributedString {
-        let result = NSAttributedString().initWith(format: format, arguments: arguments)
+    class public func attributedStringWith(format: NSString, arguments: NSAttributedString...) -> NSAttributedString {
+        let result = NSAttributedString().changeAttributedString(attributes: nil, format: format as String, arguments: arguments)
         return result
     }
     
-    public func attributedStringWith(attributes: [NSAttributedStringKey : Any], format: NSString, arguments: NSMutableAttributedString...) -> NSAttributedString {
-        let result = self.initWith(attributes: attributes, format: format as String, arguments: arguments)
+    class public func attributedStringWith(attributes: [NSAttributedStringKey : Any], format: NSString, arguments: NSAttributedString...) -> NSAttributedString {
+        let result = NSAttributedString().changeAttributedString(attributes: attributes, format: format as String, arguments: arguments)
         return result
     }
     
-    private func initWith(format: NSString, arguments: [NSMutableAttributedString]) -> NSAttributedString {
-        let result = self.initWith(attributes: nil, format: format as String, arguments: arguments)
-        return result
-    }
-    
-    private func initWith(attributes: [NSAttributedStringKey : Any]?, format: String, arguments: [NSMutableAttributedString]) -> NSAttributedString {
+    private func changeAttributedString(attributes: [NSAttributedStringKey : Any]?, format: String, arguments: [NSAttributedString]) -> NSAttributedString {
         var attributedString = NSMutableAttributedString()
         if let attribute = attributes {
             attributedString = NSMutableAttributedString(string: format, attributes: attribute)
@@ -28,19 +23,19 @@ extension NSAttributedString {
         
         attributedString.beginEditing()
         
-        let maxPosition = format.count - 1
         let parseResult = FormatStringParses()
-        let parseResults = parseResult.formatStringParser(format: format as NSString, maxPosition: maxPosition)
+        let parseResults = parseResult.formatStringParser(format: format as NSString, maxPosition: arguments.count)
             .sorted(by: { (lhs, rhs) -> Bool in
                 return rhs.range.location < lhs.range.location
             })
         
-//        var index = 0
         var attributeStringArray = [NSMutableAttributedString]()
         for argument in arguments {
-            attributeStringArray.append(argument)
+            let mutableString = NSMutableAttributedString(attributedString: argument)
+            attributeStringArray.append(mutableString)
         }
         
+        self.compareCountAttributedStrings(formatParseResultsCount: parseResults.count, attributesCount: attributeStringArray.count)
         for result in parseResults {
             var arg = attributeStringArray[result.index]
             
@@ -64,7 +59,17 @@ extension NSAttributedString {
             }
         }
         attributedString.endEditing()
-        let result = NSMutableAttributedString(attributedString: attributedString)
-        return result
+
+        return attributedString
+    }
+    
+    private func compareCountAttributedStrings(formatParseResultsCount: Int, attributesCount: Int) {
+        if formatParseResultsCount == attributesCount {
+            print("Your attributes string count is equal format parse results count")
+        } else if formatParseResultsCount < attributesCount {
+            print("Your attributes string count is great format parse results count")
+        } else if formatParseResultsCount > attributesCount {
+            print("Your attributes string count is less format parse results count")
+        }
     }
 }
