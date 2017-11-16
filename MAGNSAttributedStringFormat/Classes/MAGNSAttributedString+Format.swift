@@ -40,7 +40,6 @@ extension NSAttributedString {
             attributeStringArray.append(mutableString)
         }
         
-        NSAttributedString().compareCountAttributedStrings(formatParseResultsCount: parseResults.count, attributesCount: attributeStringArray.count)
         for result in parseResults {
             var arg = attributeStringArray[result.index]
             if NSAttributedString.superclass() != nil {
@@ -68,15 +67,5 @@ extension NSAttributedString {
 //        attributedString.endEditing()
         attributedString = NSAttributedString(attributedString: mutableString)
         return attributedString
-    }
-    
-    private func compareCountAttributedStrings(formatParseResultsCount: Int, attributesCount: Int) {
-        if formatParseResultsCount == attributesCount {
-            print("Your attributes string count is equal format parse results count")
-        } else if formatParseResultsCount < attributesCount {
-            print("Your attributes string count is great format parse results count")
-        } else if formatParseResultsCount > attributesCount {
-            print("Your attributes string count is less format parse results count")
-        }
     }
 }
