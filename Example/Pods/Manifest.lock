@@ -1,11 +1,11 @@
 PODS:
-  - MAGNSAttributedStringFormat (0.1.5)
+  - MAGNSAttributedStringFormat (0.1.6)
 
 DEPENDENCIES:
   - MAGNSAttributedStringFormat
 
 SPEC CHECKSUMS:
-  MAGNSAttributedStringFormat: f5db76567bb83febe25c452c8acbdb3b6628d601
+  MAGNSAttributedStringFormat: 990d79f3818203ccc655737cf5b72ed58e09041d
 
 PODFILE CHECKSUM: f5fcf05a52406a3bddae03d9ce4f72158a9974d5
 
