@@ -41,7 +41,7 @@ class ViewController: UIViewController {
                 NSAttributedStringKey.font: UIFont.boldSystemFont(ofSize: 23),
                 NSAttributedStringKey.foregroundColor: UIColor.gray
             ])
-
+    
         let attributedString = NSAttributedString.attributedStringWith(format: "You can multiple (%@, %@, %@ %@) arguments with their attributes each of them", arguments: one, two, three, etc)
 
         self.descriptionLabel.attributedText = attributedString

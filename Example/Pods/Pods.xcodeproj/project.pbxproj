@@ -174,18 +174,10 @@
 		8F8FA0CA1FBD81B3005B6A92 /* MAGNSAttributedStringFormat */ = {
 			isa = PBXGroup;
 			children = (
-				8F8FA0CB1FBD81D4005B6A92 /* MAGNSAttributedStringFormat */,
-			);
-			path = MAGNSAttributedStringFormat;
-			sourceTree = "<group>";
-		};
-		8F8FA0CB1FBD81D4005B6A92 /* MAGNSAttributedStringFormat */ = {
-			isa = PBXGroup;
-			children = (
 				8F8FA0CC1FBD8219005B6A92 /* Classes */,
 			);
 			name = MAGNSAttributedStringFormat;
-			path = ../../../MAGNSAttributedStringFormat;
+			path = ../../MAGNSAttributedStringFormat;
 			sourceTree = "<group>";
 		};
 		8F8FA0CC1FBD8219005B6A92 /* Classes */ = {
