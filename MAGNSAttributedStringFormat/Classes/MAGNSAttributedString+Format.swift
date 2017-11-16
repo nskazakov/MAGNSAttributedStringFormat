@@ -19,12 +19,13 @@ extension NSAttributedString {
     
     private class func changeAttributedString(attributes: [NSAttributedStringKey : Any]?, format: NSString, arguments: [NSAttributedString]) -> NSAttributedString {
         var attributedString = NSAttributedString()
+        let str = String(format)
         if let attribute = attributes {
-            attributedString = NSAttributedString(string: format as String, attributes: attribute)
+            attributedString = NSAttributedString(string: str, attributes: attribute as [String : Any])
         } else {
-            attributedString = NSAttributedString(string: format as String)
+            attributedString = NSAttributedString(string: str)
         }
-        var mutableString = NSMutableAttributedString(attributedString: attributedString)
+        let mutableString = NSMutableAttributedString(attributedString: attributedString)
 //        attributedString.beginEditing()
         
         let parseResult = FormatStringParses()
@@ -47,7 +48,7 @@ extension NSAttributedString {
                     if let attribute = attributes {
                         let argCopy = arg.mutableCopy() as? NSMutableAttributedString
                         if argCopy != nil  {
-                            argCopy?.setAttributes(attribute, range: NSMakeRange(0, (argCopy?.length)!))
+                            argCopy?.setAttributes(attribute as [String : Any], range: NSMakeRange(0, (argCopy?.length)!))
                             
                             arg.enumerateAttributes(in: NSMakeRange(0, (argCopy?.length)!),
                                                     options: .reverse,
