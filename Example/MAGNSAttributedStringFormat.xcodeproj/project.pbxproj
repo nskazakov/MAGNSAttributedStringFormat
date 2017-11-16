@@ -13,8 +13,6 @@
 		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
 		70573C6D227AAE17C64F8A57 /* Pods_MAGNSAttributedStringFormat_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D95B6C6B02EB475CEFD7863 /* Pods_MAGNSAttributedStringFormat_Tests.framework */; };
 		8F131B8B1FBB0206004657AB /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8F131B8A1FBB0206004657AB /* Info.plist */; };
-		8F1AC93B1FB467F600DD80DC /* MAGNSAttributedString+Format.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F1AC93A1FB467F600DD80DC /* MAGNSAttributedString+Format.swift */; };
-		8F7A887E1FB953EB00807436 /* FormatParseResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F7A887D1FB953EB00807436 /* FormatParseResult.swift */; };
 		8F96B4801FBB026700733C95 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8F96B47C1FBB026700733C95 /* LaunchScreen.xib */; };
 		8F96B4811FBB026700733C95 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8F96B47E1FBB026700733C95 /* Main.storyboard */; };
 		8FB502651FB45C0A0004A721 /* NOTICE in Resources */ = {isa = PBXBuildFile; fileRef = 8FB502641FB45C0A0004A721 /* NOTICE */; };
@@ -45,8 +43,6 @@
 		8960965AE6BB40595A8FB46E /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		8B8F5A9985334C613B8344F6 /* Pods-MAGNSAttributedStringFormat_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MAGNSAttributedStringFormat_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MAGNSAttributedStringFormat_Example/Pods-MAGNSAttributedStringFormat_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		8F131B8A1FBB0206004657AB /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		8F1AC93A1FB467F600DD80DC /* MAGNSAttributedString+Format.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MAGNSAttributedString+Format.swift"; sourceTree = "<group>"; };
-		8F7A887D1FB953EB00807436 /* FormatParseResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormatParseResult.swift; sourceTree = "<group>"; };
 		8F96B47D1FBB026700733C95 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		8F96B47F1FBB026700733C95 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8FB502641FB45C0A0004A721 /* NOTICE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = NOTICE; sourceTree = "<group>"; };
@@ -79,7 +75,6 @@
 		607FACC71AFB9204008FA782 = {
 			isa = PBXGroup;
 			children = (
-				8F1AC9391FB4670F00DD80DC /* Extensions */,
 				607FACF51AFB993E008FA782 /* Podspec Metadata */,
 				607FACD21AFB9204008FA782 /* Example for MAGNSAttributedStringFormat */,
 				607FACE81AFB9204008FA782 /* Tests */,
@@ -156,16 +151,6 @@
 				6D95B6C6B02EB475CEFD7863 /* Pods_MAGNSAttributedStringFormat_Tests.framework */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		8F1AC9391FB4670F00DD80DC /* Extensions */ = {
-			isa = PBXGroup;
-			children = (
-				8F1AC93A1FB467F600DD80DC /* MAGNSAttributedString+Format.swift */,
-				8F7A887D1FB953EB00807436 /* FormatParseResult.swift */,
-			);
-			name = Extensions;
-			path = ../Extensions;
 			sourceTree = "<group>";
 		};
 		F324309E12E2272CE6CBD133 /* Pods */ = {
@@ -392,8 +377,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8F1AC93B1FB467F600DD80DC /* MAGNSAttributedString+Format.swift in Sources */,
-				8F7A887E1FB953EB00807436 /* FormatParseResult.swift in Sources */,
 				607FACD81AFB9204008FA782 /* ViewController.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
 			);
