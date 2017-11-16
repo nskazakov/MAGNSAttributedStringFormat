@@ -13,9 +13,9 @@
 		2E4A1FFB8561F527E0E191D4607BE5F4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D88AAE1F92055A60CC2FC970D7D34634 /* Foundation.framework */; };
 		4CD0D0748085804E61FE5A77F4DA449E /* Pods-MAGNSAttributedStringFormat_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = C256C047C1445964E9F4059EA5806122 /* Pods-MAGNSAttributedStringFormat_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		50FC3E648CD20683D20CC37EE7EF522C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D88AAE1F92055A60CC2FC970D7D34634 /* Foundation.framework */; };
-		95D534214D9F3AFF9300E6FD987D7C21 /* ReplaceMe.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC3E3008E02A9C64A583FCA374FA0684 /* ReplaceMe.swift */; };
-		A2D3B61D6AA99EFA74EE2B8EE75D1248 /* MAGNSAttributedStringFormat-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AE15CFDA7CE9C8EF29BD3E99072F3F9 /* MAGNSAttributedStringFormat-dummy.m */; };
-		A6CECEBD846B0BF9168000B2A19F7A43 /* MAGNSAttributedStringFormat-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = D761278C118223E2125EAA2C5CB18D8C /* MAGNSAttributedStringFormat-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		95D534214D9F3AFF9300E6FD987D7C21 /* ReplaceMe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 863D428425A446210B102B5899B4B787 /* ReplaceMe.swift */; };
+		A2D3B61D6AA99EFA74EE2B8EE75D1248 /* MAGNSAttributedStringFormat-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 60F5C5BB4E295ADF2362065E30E333DC /* MAGNSAttributedStringFormat-dummy.m */; };
+		A6CECEBD846B0BF9168000B2A19F7A43 /* MAGNSAttributedStringFormat-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 5EA5FCB4560A8EAE96DE086F301F9173 /* MAGNSAttributedStringFormat-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AEA55168ADCABB31DA852F10A330D1B5 /* Pods-MAGNSAttributedStringFormat_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 173F070FA5F21431236250EB7833909F /* Pods-MAGNSAttributedStringFormat_Tests-dummy.m */; };
 		D2DA09A9923AC32E5D27A465FE1B92EA /* Pods-MAGNSAttributedStringFormat_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BEE03753BC6C7681261840F67A90FFB /* Pods-MAGNSAttributedStringFormat_Example-dummy.m */; };
 /* End PBXBuildFile section */
@@ -33,15 +33,16 @@
 /* Begin PBXFileReference section */
 		0BEE03753BC6C7681261840F67A90FFB /* Pods-MAGNSAttributedStringFormat_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-MAGNSAttributedStringFormat_Example-dummy.m"; sourceTree = "<group>"; };
 		173F070FA5F21431236250EB7833909F /* Pods-MAGNSAttributedStringFormat_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-MAGNSAttributedStringFormat_Tests-dummy.m"; sourceTree = "<group>"; };
-		1827730C2A8DB703D4911B11017D8F15 /* MAGNSAttributedStringFormat.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = MAGNSAttributedStringFormat.xcconfig; sourceTree = "<group>"; };
-		204EEEEAAB876E10F57BF6AC6969EC22 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2C69EA719B96F57354D24BD6B7A2AE4B /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		3AE15CFDA7CE9C8EF29BD3E99072F3F9 /* MAGNSAttributedStringFormat-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "MAGNSAttributedStringFormat-dummy.m"; sourceTree = "<group>"; };
+		3427608309B3F0D81D387CA1D8FBA089 /* MAGNSAttributedStringFormat-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MAGNSAttributedStringFormat-prefix.pch"; sourceTree = "<group>"; };
+		3D10FEC2C89B1294D178844CE5953364 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		441ED8DDE535C92DD67F90D255AB1BF2 /* MAGNSAttributedStringFormat.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = MAGNSAttributedStringFormat.framework; path = MAGNSAttributedStringFormat.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		5B12C9E7091DFD8D36CA9A75BBABB5C4 /* MAGNSAttributedStringFormat.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = MAGNSAttributedStringFormat.modulemap; sourceTree = "<group>"; };
-		75B8375C71F39C134341DD2925CE924B /* MAGNSAttributedStringFormat-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MAGNSAttributedStringFormat-prefix.pch"; sourceTree = "<group>"; };
+		5EA5FCB4560A8EAE96DE086F301F9173 /* MAGNSAttributedStringFormat-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MAGNSAttributedStringFormat-umbrella.h"; sourceTree = "<group>"; };
+		60F5C5BB4E295ADF2362065E30E333DC /* MAGNSAttributedStringFormat-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "MAGNSAttributedStringFormat-dummy.m"; sourceTree = "<group>"; };
+		65F941BE2EEF3CF3F54D5953CBE3B162 /* MAGNSAttributedStringFormat.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = MAGNSAttributedStringFormat.modulemap; sourceTree = "<group>"; };
 		81CE559FF12D4C35C54921D73101DCD4 /* Pods_MAGNSAttributedStringFormat_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_MAGNSAttributedStringFormat_Example.framework; path = "Pods-MAGNSAttributedStringFormat_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		848A5241A83069D8B09E45DE5E31DF53 /* Pods-MAGNSAttributedStringFormat_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-MAGNSAttributedStringFormat_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
+		863D428425A446210B102B5899B4B787 /* ReplaceMe.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ReplaceMe.swift; path = MAGNSAttributedStringFormat/Classes/ReplaceMe.swift; sourceTree = "<group>"; };
 		8F7BAF45BB1A82212CBAAD1E8C6271A8 /* Pods-MAGNSAttributedStringFormat_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-MAGNSAttributedStringFormat_Example-acknowledgements.plist"; sourceTree = "<group>"; };
 		9330DEEA5FD333D076263087BE466FB6 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
@@ -57,13 +58,12 @@
 		C256C047C1445964E9F4059EA5806122 /* Pods-MAGNSAttributedStringFormat_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-MAGNSAttributedStringFormat_Tests-umbrella.h"; sourceTree = "<group>"; };
 		C66640DD4DCCEA4EB5DD0C8E6EA0F403 /* Pods-MAGNSAttributedStringFormat_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MAGNSAttributedStringFormat_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		C9475304F6B839E06AAECE5FACD3FAB6 /* Pods-MAGNSAttributedStringFormat_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-MAGNSAttributedStringFormat_Tests-frameworks.sh"; sourceTree = "<group>"; };
-		D761278C118223E2125EAA2C5CB18D8C /* MAGNSAttributedStringFormat-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MAGNSAttributedStringFormat-umbrella.h"; sourceTree = "<group>"; };
 		D88AAE1F92055A60CC2FC970D7D34634 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		D98F08B141F78A74BF7E136854F10119 /* Pods-MAGNSAttributedStringFormat_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-MAGNSAttributedStringFormat_Example-resources.sh"; sourceTree = "<group>"; };
 		DAF5FAD7EE1992F3264B4EB9E13A590B /* Pods-MAGNSAttributedStringFormat_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-MAGNSAttributedStringFormat_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
 		DF7DD5B18F0EA98AB2C390E429CF3CFD /* Pods-MAGNSAttributedStringFormat_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-MAGNSAttributedStringFormat_Example.modulemap"; sourceTree = "<group>"; };
 		F10465221C29BF005C0E82B4C15E865A /* Pods-MAGNSAttributedStringFormat_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-MAGNSAttributedStringFormat_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
-		FC3E3008E02A9C64A583FCA374FA0684 /* ReplaceMe.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ReplaceMe.swift; path = MAGNSAttributedStringFormat/Classes/ReplaceMe.swift; sourceTree = "<group>"; };
+		F81E2B231314DB97028D8069C67DBE2A /* MAGNSAttributedStringFormat.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = MAGNSAttributedStringFormat.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,24 +95,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		2685A0D93F11282D4B4D0680FCA5F228 /* MAGNSAttributedStringFormat */ = {
-			isa = PBXGroup;
-			children = (
-				FC3E3008E02A9C64A583FCA374FA0684 /* ReplaceMe.swift */,
-				C4114B9F106EB08CD4153B00ECE71582 /* Support Files */,
-			);
-			name = MAGNSAttributedStringFormat;
-			path = ../..;
-			sourceTree = "<group>";
-		};
-		2D769F05C9B378BC339BF32BD4618A6A /* Development Pods */ = {
-			isa = PBXGroup;
-			children = (
-				2685A0D93F11282D4B4D0680FCA5F228 /* MAGNSAttributedStringFormat */,
-			);
-			name = "Development Pods";
-			sourceTree = "<group>";
-		};
 		433CD3331B6C3787F473C941B61FC68F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -128,6 +110,24 @@
 				B63C6A64CF66340668996F78DA6BB482 /* UIKit.framework */,
 			);
 			name = iOS;
+			sourceTree = "<group>";
+		};
+		4F6EF10E35F1EB7C327B11B2B08FAC86 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				58E87B394A758D8F7E3A44580BDD5672 /* MAGNSAttributedStringFormat */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		58E87B394A758D8F7E3A44580BDD5672 /* MAGNSAttributedStringFormat */ = {
+			isa = PBXGroup;
+			children = (
+				863D428425A446210B102B5899B4B787 /* ReplaceMe.swift */,
+				9B8DF66E9A8471B7595DBFD7B90FD5AF /* Support Files */,
+			);
+			name = MAGNSAttributedStringFormat;
+			path = MAGNSAttributedStringFormat;
 			sourceTree = "<group>";
 		};
 		6168FA86F6FE6FFAEFEB3A315728042C /* Pods-MAGNSAttributedStringFormat_Example */ = {
@@ -152,11 +152,25 @@
 			isa = PBXGroup;
 			children = (
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
-				2D769F05C9B378BC339BF32BD4618A6A /* Development Pods */,
 				433CD3331B6C3787F473C941B61FC68F /* Frameworks */,
+				4F6EF10E35F1EB7C327B11B2B08FAC86 /* Pods */,
 				BEB9B78CA0EBF10BCCAE16BBFE87C68A /* Products */,
 				DE60B3E2C3FC8AC10DC488D392B387E7 /* Targets Support Files */,
 			);
+			sourceTree = "<group>";
+		};
+		9B8DF66E9A8471B7595DBFD7B90FD5AF /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				3D10FEC2C89B1294D178844CE5953364 /* Info.plist */,
+				65F941BE2EEF3CF3F54D5953CBE3B162 /* MAGNSAttributedStringFormat.modulemap */,
+				F81E2B231314DB97028D8069C67DBE2A /* MAGNSAttributedStringFormat.xcconfig */,
+				60F5C5BB4E295ADF2362065E30E333DC /* MAGNSAttributedStringFormat-dummy.m */,
+				3427608309B3F0D81D387CA1D8FBA089 /* MAGNSAttributedStringFormat-prefix.pch */,
+				5EA5FCB4560A8EAE96DE086F301F9173 /* MAGNSAttributedStringFormat-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/MAGNSAttributedStringFormat";
 			sourceTree = "<group>";
 		};
 		BEB9B78CA0EBF10BCCAE16BBFE87C68A /* Products */ = {
@@ -167,20 +181,6 @@
 				C103D3D538AC014C5FD06A2A23C8587F /* Pods_MAGNSAttributedStringFormat_Tests.framework */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		C4114B9F106EB08CD4153B00ECE71582 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				204EEEEAAB876E10F57BF6AC6969EC22 /* Info.plist */,
-				5B12C9E7091DFD8D36CA9A75BBABB5C4 /* MAGNSAttributedStringFormat.modulemap */,
-				1827730C2A8DB703D4911B11017D8F15 /* MAGNSAttributedStringFormat.xcconfig */,
-				3AE15CFDA7CE9C8EF29BD3E99072F3F9 /* MAGNSAttributedStringFormat-dummy.m */,
-				75B8375C71F39C134341DD2925CE924B /* MAGNSAttributedStringFormat-prefix.pch */,
-				D761278C118223E2125EAA2C5CB18D8C /* MAGNSAttributedStringFormat-umbrella.h */,
-			);
-			name = "Support Files";
-			path = "Example/Pods/Target Support Files/MAGNSAttributedStringFormat";
 			sourceTree = "<group>";
 		};
 		DE60B3E2C3FC8AC10DC488D392B387E7 /* Targets Support Files */ = {
@@ -541,7 +541,7 @@
 		};
 		76A859C4D832125C90BD8B8D7A58E049 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1827730C2A8DB703D4911B11017D8F15 /* MAGNSAttributedStringFormat.xcconfig */;
+			baseConfigurationReference = F81E2B231314DB97028D8069C67DBE2A /* MAGNSAttributedStringFormat.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -640,7 +640,7 @@
 		};
 		D516D887823CFD966B1CEE68224CA1AA /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1827730C2A8DB703D4911B11017D8F15 /* MAGNSAttributedStringFormat.xcconfig */;
+			baseConfigurationReference = F81E2B231314DB97028D8069C67DBE2A /* MAGNSAttributedStringFormat.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";

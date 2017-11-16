@@ -1,7 +1,7 @@
 use_frameworks!
 
 target 'MAGNSAttributedStringFormat_Example' do
-  pod 'MAGNSAttributedStringFormat', :path => '../'
+  pod 'MAGNSAttributedStringFormat'
 
   target 'MAGNSAttributedStringFormat_Tests' do
     inherit! :search_paths

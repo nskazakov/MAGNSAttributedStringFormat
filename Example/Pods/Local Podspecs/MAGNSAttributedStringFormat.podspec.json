@@ -1,8 +1,8 @@
 {
   "name": "MAGNSAttributedStringFormat",
-  "version": "0.1.0",
-  "summary": "It makes for convenient formatting of string attributed in the swift.",
-  "description": "'MAGNSAttributedStringFormat may simplify the work with attributes string.'",
+  "version": "0.1.5",
+  "summary": "You can add multiple attributes string at the same time",
+  "description": "'An extension to NSAttributedString for creating attributed strings by using a\ngiven format string as a template into which the remaining argument values are\nsubstituted. This is helpful for using in conjunction with internationalisation.'",
   "homepage": "https://github.com/nskazakov/MAGNSAttributedStringFormat",
   "license": {
     "type": "Apache License, Version 2.0",
@@ -13,7 +13,7 @@
   },
   "source": {
     "git": "https://github.com/nskazakov/MAGNSAttributedStringFormat.git",
-    "tag": "0.1.0"
+    "tag": "0.1.5"
   },
   "platforms": {
     "ios": "8.0"

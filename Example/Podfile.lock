@@ -1,16 +1,12 @@
 PODS:
-  - MAGNSAttributedStringFormat (0.1.0)
+  - MAGNSAttributedStringFormat (0.1.5)
 
 DEPENDENCIES:
-  - MAGNSAttributedStringFormat (from `../`)
-
-EXTERNAL SOURCES:
-  MAGNSAttributedStringFormat:
-    :path: ../
+  - MAGNSAttributedStringFormat
 
 SPEC CHECKSUMS:
-  MAGNSAttributedStringFormat: e62eb951380ad85c41fc705bf405db278d96705c
+  MAGNSAttributedStringFormat: f5db76567bb83febe25c452c8acbdb3b6628d601
 
-PODFILE CHECKSUM: c2d06e74e3b9d3f50428effab939a87a0bce26e2
+PODFILE CHECKSUM: f5fcf05a52406a3bddae03d9ce4f72158a9974d5
 
 COCOAPODS: 1.3.1
