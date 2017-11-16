@@ -1,7 +1,3 @@
-//
-//  ViewController.swift
-//  MAGNSAttributedStringFormat
-//
 //  Created by Nikita Kazakov on 11/09/2017.
 //  Copyright (c) 2017 Nikita Kazakov. All rights reserved.
 //
@@ -18,46 +14,56 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.testAttributedFormatString()
+        self.testAttributedStringFormat()
+        self.testAttributedStringFormatWithAttributes()
     }
     
+//    Use without attributes to set attributes only for arguments
     
-    func testAttributedFormatString() {
-        let blue = NSAttributedString(string: "blue", attributes: [
+    func testAttributedStringFormat() {
+        
+        let one = NSAttributedString(string: "one", attributes: [
                 NSAttributedStringKey.font: UIFont.boldSystemFont(ofSize: 23),
                 NSAttributedStringKey.foregroundColor: UIColor.blue
             ])
 
-        let green = NSAttributedString(string: "green", attributes: [
+        let two = NSAttributedString(string: "two", attributes: [
                 NSAttributedStringKey.font: UIFont.boldSystemFont(ofSize: 23),
                 NSAttributedStringKey.foregroundColor: UIColor.green
             ])
 
-        let red = NSAttributedString(string: "11111", attributes: [
+        let three = NSAttributedString(string: "three", attributes: [
                 NSAttributedStringKey.font: UIFont.boldSystemFont(ofSize: 23),
                 NSAttributedStringKey.foregroundColor: UIColor.red
             ])
-
-        let attr = NSAttributedString.attributedStringWith(format: "%@My favorite color is %@ an %@, not is %@", arguments: red, blue, green)
-
         
-        let underlineStringTest = NSMutableAttributedString(string: "Nikita", attributes: [
-                NSAttributedStringKey.underlineStyle: NSUnderlineStyle.styleSingle.rawValue,
-
+        let etc = NSAttributedString(string: "etc", attributes: [
                 NSAttributedStringKey.font: UIFont.boldSystemFont(ofSize: 23),
                 NSAttributedStringKey.foregroundColor: UIColor.gray
             ])
 
-        let attribute = NSAttributedString.attributedStringWith(attributes: [
-                                                                        NSAttributedStringKey.font: UIFont.boldSystemFont(ofSize: 32),
-                                                                        NSAttributedStringKey.foregroundColor: UIColor.purple
-                                                                ],
-                                                                format: "My name is %@. My name need underline", arguments: underlineStringTest)
-        
-        self.descriptionLabel.attributedText = attribute
-        self.textView.attributedText = attr
+        let attributedString = NSAttributedString.attributedStringWith(format: "You can multiple (%@, %@, %@ %@) arguments with their attributes each of them", arguments: one, two, three, etc)
 
+        self.descriptionLabel.attributedText = attributedString
+    }
+    
+//        Use with attributes to set attributes for the entire string
+
+    func testAttributedStringFormatWithAttributes() {
         
+        let underlineStringTest = NSMutableAttributedString(string: "Nikita", attributes: [
+                                                                                NSAttributedStringKey.underlineStyle: NSUnderlineStyle.styleSingle.rawValue,
+                                                                                NSAttributedStringKey.font: UIFont.boldSystemFont(ofSize: 23),
+                                                                                NSAttributedStringKey.foregroundColor: UIColor.gray
+                                                                            ])
+        
+        let attributedString = NSAttributedString.attributedStringWith(attributes: [
+            NSAttributedStringKey.font: UIFont.boldSystemFont(ofSize: 32),
+                                                                    NSAttributedStringKey.foregroundColor: UIColor.purple
+                                                                ],
+                                                                format: "My name is %@. My name needs to be emphasize", arguments: underlineStringTest)
+        
+        self.textView.attributedText = attributedString
     }
 
 }

@@ -1,10 +1,12 @@
 Pod::Spec.new do |s|
   s.name             = 'MAGNSAttributedStringFormat'
-  s.version          = '0.1.0'
-  s.summary          = 'It makes for convenient formatting of string attributed in the swift.'
+  s.version          = '0.1.1'
+  s.summary          = 'You can add multiple attributes string at the same time'
 
   s.description      = <<-DESC
-'MAGNSAttributedStringFormat may simplify the work with attributes string.'
+'An extension to NSAttributedString for creating attributed strings by using a
+given format string as a template into which the remaining argument values are
+substituted. This is helpful for using in conjunction with internationalisation.'
                         DESC
 
   s.homepage         = 'https://github.com/nskazakov/MAGNSAttributedStringFormat'
