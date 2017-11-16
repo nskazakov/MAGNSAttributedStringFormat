@@ -168,7 +168,7 @@
 			children = (
 				8F8FA0CA1FBD81B3005B6A92 /* MAGNSAttributedStringFormat */,
 			);
-			path = "Development Pods";
+			name = "Development Pods";
 			sourceTree = "<group>";
 		};
 		8F8FA0CA1FBD81B3005B6A92 /* MAGNSAttributedStringFormat */ = {
@@ -185,7 +185,7 @@
 				8F8FA0CC1FBD8219005B6A92 /* Classes */,
 			);
 			name = MAGNSAttributedStringFormat;
-			path = ../../../../MAGNSAttributedStringFormat;
+			path = ../../../MAGNSAttributedStringFormat;
 			sourceTree = "<group>";
 		};
 		8F8FA0CC1FBD8219005B6A92 /* Classes */ = {
