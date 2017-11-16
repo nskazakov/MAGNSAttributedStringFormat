@@ -1,14 +1,13 @@
 MAGNSAttributedStringFormat
 =====================================================================
 
-[![CI Status](http://img.shields.io/travis/Nikita Kazakov/MAGNSAttributedStringFormat.svg?style=flat)](https://travis-ci.org/Nikita Kazakov/MAGNSAttributedStringFormat)
+
 [![Version](https://img.shields.io/cocoapods/v/MAGNSAttributedStringFormat.svg?style=flat)](http://cocoapods.org/pods/MAGNSAttributedStringFormat)
 [![License](https://img.shields.io/cocoapods/l/MAGNSAttributedStringFormat.svg?style=flat)](http://cocoapods.org/pods/MAGNSAttributedStringFormat)
 [![Platform](https://img.shields.io/cocoapods/p/MAGNSAttributedStringFormat.svg?style=flat)](http://cocoapods.org/pods/MAGNSAttributedStringFormat)
 
 An extension to NSAttributedString for creating attributed strings by using a
-given format string as a template into which the remaining argument values are
-substituted. This is helpful for using in conjunction with internationalisation.
+given format string.
 
 Use with attributes to set attributes for the entire string
 
