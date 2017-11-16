@@ -8,24 +8,24 @@ extension NSAttributedString {
     
 
     class public func attributedStringWith(format: NSString, arguments: NSAttributedString...) -> NSAttributedString {
-        let result = NSAttributedString().changeAttributedString(attributes: nil, format: format, arguments: arguments)
+        let result = self.changeAttributedString(attributes: nil, format: format, arguments: arguments)
         return result
     }
     
     class public func attributedStringWith(attributes: [NSAttributedStringKey : Any], format: NSString, arguments: NSAttributedString...) -> NSAttributedString {
-        let result = NSAttributedString().changeAttributedString(attributes: attributes, format: format, arguments: arguments)
+        let result = self.changeAttributedString(attributes: attributes, format: format, arguments: arguments)
         return result
     }
     
-    private func changeAttributedString(attributes: [NSAttributedStringKey : Any]?, format: NSString, arguments: [NSAttributedString]) -> NSAttributedString {
-        var attributedString = NSMutableAttributedString()
+    private class func changeAttributedString(attributes: [NSAttributedStringKey : Any]?, format: NSString, arguments: [NSAttributedString]) -> NSAttributedString {
+        var attributedString = NSAttributedString()
         if let attribute = attributes {
-            attributedString = NSMutableAttributedString(string: format as String, attributes: attribute)
+            attributedString = NSAttributedString(string: format as String, attributes: attribute)
         } else {
-            attributedString = NSMutableAttributedString(string: format as String)
+            attributedString = NSAttributedString(string: format as String)
         }
-        
-        attributedString.beginEditing()
+        var mutableString = NSMutableAttributedString(attributedString: attributedString)
+//        attributedString.beginEditing()
         
         let parseResult = FormatStringParses()
         let parseResults = parseResult.formatStringParser(format: format, maxPosition: arguments.count)
@@ -33,13 +33,13 @@ extension NSAttributedString {
                 return rhs.range.location < lhs.range.location
             })
         
-        var attributeStringArray = [NSMutableAttributedString]()
+        var attributeStringArray = [NSAttributedString]()
         for argument in arguments {
             let mutableString = NSMutableAttributedString(attributedString: argument)
             attributeStringArray.append(mutableString)
         }
         
-        self.compareCountAttributedStrings(formatParseResultsCount: parseResults.count, attributesCount: attributeStringArray.count)
+        NSAttributedString().compareCountAttributedStrings(formatParseResultsCount: parseResults.count, attributesCount: attributeStringArray.count)
         for result in parseResults {
             var arg = attributeStringArray[result.index]
             if NSAttributedString.superclass() != nil {
@@ -58,14 +58,14 @@ extension NSAttributedString {
                         }
                     }
                     
-                    attributedString.replaceCharacters(in: result.range, with: arg)
+                    mutableString.replaceCharacters(in: result.range, with: arg)
                 } else {
-                    attributedString.replaceCharacters(in: result.range, with: arg.description)
+                    mutableString.replaceCharacters(in: result.range, with: arg.description)
                 }
             }
         }
-        attributedString.endEditing()
-
+//        attributedString.endEditing()
+        attributedString = NSAttributedString(attributedString: mutableString)
         return attributedString
     }
     
