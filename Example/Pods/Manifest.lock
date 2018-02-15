@@ -1,12 +1,12 @@
 PODS:
-  - MAGNSAttributedStringFormat (0.1.7)
+  - MAGNSAttributedStringFormat (0.2.1)
 
 DEPENDENCIES:
-  - MAGNSAttributedStringFormat
+  - MAGNSAttributedStringFormat (~> 0.2.1)
 
 SPEC CHECKSUMS:
-  MAGNSAttributedStringFormat: 1e51bf06c3a74b3620b8b7f604117c1be49408e7
+  MAGNSAttributedStringFormat: 2e66da05c63a41bae99b79b5d6a25c20cbe63910
 
-PODFILE CHECKSUM: f5fcf05a52406a3bddae03d9ce4f72158a9974d5
+PODFILE CHECKSUM: d8c13b9aa6f3b4b5d06627405cede3e686bdd356
 
-COCOAPODS: 1.3.1
+COCOAPODS: 1.4.0

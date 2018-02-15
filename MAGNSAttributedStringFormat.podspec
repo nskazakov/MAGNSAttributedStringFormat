@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'MAGNSAttributedStringFormat'
-  s.version          = '0.2.1'
+  s.version          = '0.3.0'
   s.summary          = 'You can add multiple attributes string at the same time'
 
   s.description      = <<-DESC

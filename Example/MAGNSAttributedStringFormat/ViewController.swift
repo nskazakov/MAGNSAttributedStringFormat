@@ -42,12 +42,12 @@ class ViewController: UIViewController {
                 NSAttributedStringKey.foregroundColor: UIColor.gray
             ])
     
-        let attributedString = NSAttributedString.attributedStringWith(format: "You can multiple (%@, %@, %@ %@) arguments with their attributes each of them", arguments: one, two, three, etc)
+       let attributedString = NSAttributedString.attributedStringWith(format: "You can multiple (%@, %@, %@ %@) arguments with their attributes each of them", arguments: one, two, three, etc)
 
         self.descriptionLabel.attributedText = attributedString
     }
     
-//        Use with attributes to set attributes for the entire string
+//       Use with attributes to set attributes for the entire string
 
     func testAttributedStringFormatWithAttributes() {
         
@@ -62,7 +62,7 @@ class ViewController: UIViewController {
                                                                     NSAttributedStringKey.foregroundColor: UIColor.purple
                                                                 ],
                                                                 format: "My name is %@. My name needs to be emphasize", arguments: underlineStringTest)
-        
+
         self.textView.attributedText = attributedString
     }
 
